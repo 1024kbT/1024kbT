@@ -1,6 +1,6 @@
 
 
-### Hi there, I am FTW👋
+### Hi there, I am FTWest👋
 
 > A Front end developer from **HangZhou, China**.
 
