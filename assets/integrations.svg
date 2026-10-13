@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="198" viewBox="0 0 840 198" role="img" aria-label="Home-lab integrations and languages">
+<title>Home-lab integrations and languages</title>
+<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.2" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="5" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<linearGradient id="neon" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#ff7b00"/><stop offset="1" stop-color="#a64dff"/>
+</linearGradient>
+<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+  <path d="M20 0H0V20" fill="none" stroke="#132033" stroke-width=".6"/>
+</pattern>
+<linearGradient id="scanline" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#00e5ff" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#00e5ff" stop-opacity=".07"/>
+  <stop offset="1" stop-color="#00e5ff" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<style>
+text { font-family: 'JetBrains Mono','Fira Code','SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace; fill: #c9d6e5; }
+.dim { fill: #5c6f88; }
+.cyan { fill: #00e5ff; } .mag { fill: #ff2fd0; } .green { fill: #39ff88; }
+.amber { fill: #ffb547; } .red { fill: #ff4d6d; }
+.b { font-weight: 700; }
+.fade { opacity: 0; animation: fade .35s ease-out forwards; }
+@keyframes fade { to { opacity: 1; } }
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.pulse { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+.scan { animation: scan 7s linear infinite; }
+@keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(var(--h)); } }
+
+.card { opacity: 0; animation: pop .45s cubic-bezier(.2,1.4,.4,1) forwards; transform-box: fill-box; transform-origin: center; }
+@keyframes pop { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1); } }
+.bar { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: grow 1.2s ease-out forwards; }
+@keyframes grow { to { transform: scaleX(1); } }
+</style>
+<rect x=".5" y=".5" width="839" height="197" rx="14" fill="#070b12" stroke="#1c2a3d"/>
+<rect x="1" y="1" width="838" height="196" rx="14" fill="url(#grid)" opacity=".55"/>
+<text x="24" y="34" font-size="14" class="b cyan" xml:space="preserve" >DEV STACK</text>
+<text x="150" y="34" font-size="10.5" class="dim" xml:space="preserve" >TypeScript · Vue · Node.js · NestJS</text>
+<text x="816" y="34" font-size="10.5" class="green" text-anchor="end" xml:space="preserve" >4 technologies</text>
+<g class="card" style="animation-delay:0.15s"><rect x="24.0" y="50" width="189.0" height="62" rx="10" fill="#0c1320" stroke="#1c2a3d"/><circle cx="54.0" cy="81.0" r="18" fill="#3178c6" fill-opacity=".14" stroke="#3178c6" stroke-width="1.5" filter="url(#glow)"/><text x="54.0" y="85.0" font-size="11.5" class="b" text-anchor="middle" xml:space="preserve" style="fill:#3178c6">TS</text><text x="82.0" y="77" font-size="12" class="b" xml:space="preserve" >TypeScript</text><text x="82.0" y="94" font-size="10" class="dim" xml:space="preserve" >类型安全 · 前端</text><circle cx="199.0" cy="64" r="3.5" fill="#39ff88" class="pulse" style="animation-delay:0.0s" filter="url(#glow)"/></g>
+<g class="card" style="animation-delay:0.27s"><rect x="225.0" y="50" width="189.0" height="62" rx="10" fill="#0c1320" stroke="#1c2a3d"/><circle cx="255.0" cy="81.0" r="18" fill="#42b883" fill-opacity=".14" stroke="#42b883" stroke-width="1.5" filter="url(#glow)"/><text x="255.0" y="85.0" font-size="10" class="b" text-anchor="middle" xml:space="preserve" style="fill:#42b883">VUE</text><text x="283.0" y="77" font-size="12" class="b" xml:space="preserve" >Vue.js</text><text x="283.0" y="94" font-size="10" class="dim" xml:space="preserve" >界面开发 · 组件</text><circle cx="400.0" cy="64" r="3.5" fill="#39ff88" class="pulse" style="animation-delay:0.3s" filter="url(#glow)"/></g>
+<g class="card" style="animation-delay:0.39s"><rect x="426.0" y="50" width="189.0" height="62" rx="10" fill="#0c1320" stroke="#1c2a3d"/><circle cx="456.0" cy="81.0" r="18" fill="#6da55f" fill-opacity=".14" stroke="#6da55f" stroke-width="1.5" filter="url(#glow)"/><text x="456.0" y="85.0" font-size="10" class="b" text-anchor="middle" xml:space="preserve" style="fill:#6da55f">NODE</text><text x="484.0" y="77" font-size="12" class="b" xml:space="preserve" >Node.js</text><text x="484.0" y="94" font-size="10" class="dim" xml:space="preserve" >服务端 · JavaScript</text><circle cx="601.0" cy="64" r="3.5" fill="#39ff88" class="pulse" style="animation-delay:0.6s" filter="url(#glow)"/></g>
+<g class="card" style="animation-delay:0.51s"><rect x="627.0" y="50" width="189.0" height="62" rx="10" fill="#0c1320" stroke="#1c2a3d"/><circle cx="657.0" cy="81.0" r="18" fill="#e0234e" fill-opacity=".14" stroke="#e0234e" stroke-width="1.5" filter="url(#glow)"/><text x="657.0" y="85.0" font-size="10" class="b" text-anchor="middle" xml:space="preserve" style="fill:#e0234e">NEST</text><text x="685.0" y="77" font-size="12" class="b" xml:space="preserve" >NestJS</text><text x="685.0" y="94" font-size="10" class="dim" xml:space="preserve" >服务端框架 · 学习中</text><circle cx="802.0" cy="64" r="3.5" fill="#39ff88" class="pulse" style="animation-delay:0.9s" filter="url(#glow)"/></g>
+<text x="24" y="146" font-size="12" class="b cyan" xml:space="preserve" >POWER USAGE BY LANGUAGE</text>
+<text x="816" y="146" font-size="10" class="dim" text-anchor="end" xml:space="preserve" >public repos · bytes of code</text>
+<text x="24" y="178" font-size="11" class="dim" xml:space="preserve" >语言占比等待 GitHub Actions 首次同步</text>
+<rect class="scan" style="--h:198px" x="1" y="0" width="838" height="40" fill="url(#scanline)"/>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="429" viewBox="0 0 840 429" role="img" aria-label="FTWest — homelab boot console">
+<title>FTWest — homelab boot console</title>
+<defs>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.2" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="5" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<linearGradient id="neon" x1="0" x2="1" y1="0" y2="0">
+  <stop offset="0" stop-color="#ff7b00"/><stop offset="1" stop-color="#a64dff"/>
+</linearGradient>
+<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+  <path d="M20 0H0V20" fill="none" stroke="#132033" stroke-width=".6"/>
+</pattern>
+<linearGradient id="scanline" x1="0" x2="0" y1="0" y2="1">
+  <stop offset="0" stop-color="#00e5ff" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#00e5ff" stop-opacity=".07"/>
+  <stop offset="1" stop-color="#00e5ff" stop-opacity="0"/>
+</linearGradient>
+</defs>
+<style>
+text { font-family: 'JetBrains Mono','Fira Code','SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace; fill: #c9d6e5; }
+.dim { fill: #5c6f88; }
+.cyan { fill: #00e5ff; } .mag { fill: #ff2fd0; } .green { fill: #39ff88; }
+.amber { fill: #ffb547; } .red { fill: #ff4d6d; }
+.b { font-weight: 700; }
+.fade { opacity: 0; animation: fade .35s ease-out forwards; }
+@keyframes fade { to { opacity: 1; } }
+.blink { animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.pulse { animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+.scan { animation: scan 7s linear infinite; }
+@keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(var(--h)); } }
+
+.glitch { animation: glitch 6s infinite; }
+@keyframes glitch {
+  0%, 91%, 100% { transform: translate(0,0); }
+  92% { transform: translate(-3px,1px); } 93% { transform: translate(3px,-1px); }
+  94% { transform: translate(-1px,0); }
+}
+.ghost { animation: ghost 6s infinite; opacity: 0; }
+@keyframes ghost { 0%,91%,95%,100% { opacity: 0; } 92%,94% { opacity: .6; } }
+</style>
+<rect x=".5" y=".5" width="839" height="428" rx="14" fill="#070b12" stroke="#1c2a3d"/>
+<rect x="1" y="1" width="838" height="427" rx="14" fill="url(#grid)" opacity=".55"/>
+<path d="M1 34H839" stroke="#1c2a3d"/>
+<circle cx="22" cy="18" r="5" fill="#ff4d6d"/><circle cx="38" cy="18" r="5" fill="#ffb547"/><circle cx="54" cy="18" r="5" fill="#39ff88"/>
+<text x="420.0" y="22" font-size="11" class="dim" text-anchor="middle" xml:space="preserve" >1024kbt@dev.local — ssh — 120×32</text>
+<text x="822" y="22" font-size="10" class="green pulse" text-anchor="end" xml:space="preserve" >● CONNECTED</text>
+<g class="ghost" transform="translate(4,0)"><text x="34" y="68" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█████ █████ █   █ █████  ████ █████</text><text x="34" y="83" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█       █   █   █ █     █       █  </text><text x="34" y="98" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█       █   █   █ █     █       █  </text><text x="34" y="113" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">████    █   █ █ █ ████   ███    █  </text><text x="34" y="128" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█       █   █ █ █ █         █   █  </text><text x="34" y="143" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█       █   █ █ █ █         █   █  </text><text x="34" y="158" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:#ff2fd0">█       █    █ █  █████ ████    █  </text></g>
+<g class="glitch" filter="url(#glow)"><text x="34" y="68" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█████ █████ █   █ █████  ████ █████</text><text x="34" y="83" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█       █   █   █ █     █       █  </text><text x="34" y="98" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█       █   █   █ █     █       █  </text><text x="34" y="113" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">████    █   █ █ █ ████   ███    █  </text><text x="34" y="128" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█       █   █ █ █ █         █   █  </text><text x="34" y="143" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█       █   █ █ █ █         █   █  </text><text x="34" y="158" font-size="13" textLength="294.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve" style="fill:url(#neon)">█       █    █ █  █████ ████    █  </text></g>
+<rect x="456" y="50" width="360" height="114" rx="8" fill="none" stroke="#00e5ff" stroke-opacity=".35"/>
+<text x="470" y="70" font-size="15" class="fade b cyan" xml:space="preserve" style="animation-delay:0.20s">FTWest</text>
+<text x="470" y="86" font-size="11.5" class="fade mag" xml:space="preserve" style="animation-delay:0.32s">Front-end · Full-stack learning</text>
+<text x="470" y="102" font-size="11" class="fade " xml:space="preserve" style="animation-delay:0.44s">loc     Hangzhou, China</text>
+<text x="470" y="118" font-size="11" class="fade " xml:space="preserve" style="animation-delay:0.56s">uptime  6 yrs on GitHub</text>
+<text x="470" y="134" font-size="11" class="fade " xml:space="preserve" style="animation-delay:0.68s">repos   19 public · 2 ★</text>
+<text x="470" y="150" font-size="11" class="fade dim" xml:space="preserve" style="animation-delay:0.80s">motto   Keep it simple. Keep building.</text>
+<clipPath id="t186"><rect x="30" y="172" width="0" height="20"><animate attributeName="width" from="0" to="191.70000000000002" begin="0.6s" dur="0.81s" fill="freeze"/></rect></clipPath><g clip-path="url(#t186)"><text x="30" y="186" font-size="12.5" class="green" xml:space="preserve" >$ ssh 1024kbt@dev.local</text></g>
+<g class="fade" style="animation-delay:1.90s"><text x="30" y="208" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 加载 dev-stack.service — 4 项技术栈就绪</text></g>
+<g class="fade" style="animation-delay:2.18s"><text x="30" y="227" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 启动 vue.service + nestjs.service — 持续学习中</text></g>
+<g class="fade" style="animation-delay:2.46s"><text x="30" y="246" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 挂载 /dev/github — 19 个公开仓库，2 颗星</text></g>
+<g class="fade" style="animation-delay:2.74s"><text x="30" y="265" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 贡献日历已同步 — 367 天内 9 次贡献</text></g>
+<g class="fade" style="animation-delay:3.02s"><text x="30" y="284" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 连续贡献 — 当前 0 天，最长 1 天</text></g>
+<g class="fade" style="animation-delay:3.30s"><text x="30" y="303" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 启用季节主题 — HALLOWEEN 🎃</text></g>
+<g class="fade" style="animation-delay:3.58s"><text x="30" y="322" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#39ff88" font-weight="700">  OK  </tspan><tspan fill="#5c6f88">]</tspan> 杭州天气 — 🏙️ 白天</text></g>
+<g class="fade" style="animation-delay:3.86s"><text x="30" y="341" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#ffb547" font-weight="700"> WARN </tspan><tspan fill="#5c6f88">]</tspan> ups.service — 已休息 56 天，小屋使用备用电源</text></g>
+<g class="fade" style="animation-delay:4.14s"><text x="30" y="360" font-size="12" xml:space="preserve"><tspan fill="#5c6f88">[</tspan><tspan fill="#ffb547" font-weight="700"> WARN </tspan><tspan fill="#5c6f88">]</tspan> coffee.service — 咖啡不足，请续杯 ☕</text></g>
+<clipPath id="t387"><rect x="30" y="373" width="0" height="20"><animate attributeName="width" from="0" to="128.5" begin="4.720000000000001s" dur="0.53s" fill="freeze"/></rect></clipPath><g clip-path="url(#t387)"><text x="30" y="387" font-size="12.5" class="green" xml:space="preserve" >$ echo $WELCOME</text></g>
+<g class="fade" style="animation-delay:5.52s"><text x="30" y="407" font-size="12.5" class="cyan b" xml:space="preserve" >Welcome to FTWest's dev home.</text></g>
+<rect class="blink" x="255" y="396" width="8" height="14" fill="#00e5ff"/>
+<rect class="scan" style="--h:429px" x="1" y="0" width="838" height="40" fill="url(#scanline)"/>
+</svg>

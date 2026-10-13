@@ -1,0 +1,35 @@
+# 集中配置个人资料；自动生成时统一替换 README 和 SVG，避免回写原作者的信息。
+login = "1024kbT"
+display_name = "FTWest"
+tagline_en = "Front-end developer · TypeScript · Vue · Node.js"
+tagline_zh = "来自杭州的前端开发者，持续学习 TypeScript、Vue、Node.js 与 NestJS。"
+location = "Hangzhou, China"
+hostname = "dev.local"
+role = "Front-end · Full-stack learning"
+motto = "Keep it simple. Keep building."
+
+# 沿用原主页的设备卡片布局，展示现有个人主页已经公开的四项技术栈。
+integrations = [
+  { name = "TypeScript", kind = "类型安全 · 前端", short = "TS", color = "#3178c6" },
+  { name = "Vue.js", kind = "界面开发 · 组件", short = "VUE", color = "#42b883" },
+  { name = "Node.js", kind = "服务端 · JavaScript", short = "NODE", color = "#6da55f" },
+  { name = "NestJS", kind = "服务端框架 · 学习中", short = "NEST", color = "#e0234e" },
+]
+
+# 只展示已确认存在的公开项目；删除或转为私有时自动跳过。
+featured = [
+  { repo = "zx-Fitness", icon = "🏋️" },
+  { repo = "my-blog", icon = "✍️" },
+  { repo = "Auth", icon = "🔐" },
+  { repo = "promise", icon = "⚡" },
+  { repo = "demo-k8s", icon = "🐳" },
+  { repo = "amap-demo", icon = "🗺️" },
+]
+
+# 保留原主页公开的联系方式。
+links = [
+  { label = "GitHub", url = "https://github.com/1024kbT", logo = "github" },
+  { label = "Email", url = "mailto:843223020@qq.com", logo = "gmail" },
+]
+qq = "843223020"
+email = "843223020@qq.com"
