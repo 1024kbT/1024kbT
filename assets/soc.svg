@@ -95,7 +95,7 @@ text { font-family: 'JetBrains Mono','Fira Code','SFMono-Regular',Menlo,Consolas
 <g class="fade" style="animation-delay:1.70s"><text x="584" y="116" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#00e5ff">INFO</tspan> 1★ watching promise</text></g>
 <g class="fade" style="animation-delay:2.05s"><text x="584" y="136" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#00e5ff">INFO</tspan> operator idle: tuning auto…</text></g>
 <g class="fade" style="animation-delay:2.40s"><text x="584" y="156" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#ff4d6d">CRIT</tspan> peak 3 evt on 11-27</text></g>
-<g class="fade" style="animation-delay:2.75s"><text x="584" y="176" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#00e5ff">INFO</tspan> 活动细分等待同步</text></g>
+<g class="fade" style="animation-delay:2.75s"><text x="584" y="176" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#00e5ff">INFO</tspan> 0 PRs · 1 issues /367d</text></g>
 <g class="fade" style="animation-delay:3.10s"><text x="584" y="196" font-size="10" xml:space="preserve"><tspan font-weight="700" style="fill:#39ff88">OK  </tspan> 当前状态正常</text></g>
 <text x="300" y="242" font-size="9.5" class="dim" xml:space="preserve" >ACTIVITY · last 30 days</text>
 <text x="824" y="242" font-size="9.5" class="cyan" text-anchor="end" xml:space="preserve" >Σ 0 evt</text>
