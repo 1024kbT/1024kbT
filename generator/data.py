@@ -52,7 +52,6 @@ query($login: String!) {
         issues(states: OPEN, first: 3, orderBy: {field: CREATED_AT, direction: DESC}) {
           nodes { number createdAt author { login } }
         }
-        stargazers(last: 10, orderBy: {field: STARRED_AT, direction: ASC}) { edges { starredAt } }
         defaultBranchRef {
           target {
             ... on Commit {
@@ -77,14 +76,9 @@ def fetch(login: str, token: str) -> dict:
     )
     with urllib.request.urlopen(req, timeout=30) as resp:
         payload = json.load(resp)
-    # Actions 令牌可能无法读取其他公开仓库的星标用户；该装饰字段缺失不影响主要贡献数据。
-    errors = payload.get("errors", [])
-    blocking = [error for error in errors
-                if error.get("type") != "FORBIDDEN" or (error.get("path") or [None])[-1] != "stargazers"]
-    if blocking:
-        raise RuntimeError(f"GitHub 数据读取失败：{blocking}")
-    if errors:
-        print("星标用户列表权限不足，跳过新星小鸟与星标里程碑装饰")
+    # 仅查询 Actions 令牌可读取的公开字段；发生其他错误时保留上次主页，避免输出残缺项目。
+    if payload.get("errors"):
+        raise RuntimeError(f"GitHub 数据读取失败：{payload['errors']}")
     return normalise(payload["data"]["user"])
 
 
@@ -113,8 +107,8 @@ def normalise(user: dict) -> dict:
             "issues": [{"number": i["number"], "created_at": i["createdAt"],
                         "author": (i.get("author") or {}).get("login") or "ghost"}
                        for i in r["issues"]["nodes"]],
-            # 权限不足时 GraphQL 保留仓库数据，但将 stargazers 返回为 null。
-            "recent_stars": [e["starredAt"] for e in (r.get("stargazers") or {}).get("edges", [])],
+            # 不请求受限的星标用户列表，保留公开总星数；只省略新星小鸟与里程碑装饰。
+            "recent_stars": [],
             "last_commit": _my_commit(r, user["login"]),
         })
         for e in r["languages"]["edges"]:
